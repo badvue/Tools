@@ -4,3 +4,5 @@ sudo fdisk -l
 sudo mkdir /media/usb-drive
 # Mount USB Drive, replace "sdc1" with actual device name
 Sudo mount /dev/sdc1 /media/usb-drive/
+# Unmount USB
+sudo umount /media/usb-drive
