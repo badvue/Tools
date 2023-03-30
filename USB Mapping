@@ -1,0 +1,14 @@
+# Use the below to find the Product ID & Vendor ID; command outputs VendorID:ProductID
+lsusb
+
+# Use this command and change the XXX/XXX to the Bux XXX and Device XXX to check the subsystem to use
+sudo udevadm info --name=/dev/bus/usb/XXX/XXX --attribute-walk
+
+# Write a rules configuration file using:
+sudo nano /etc/udev/rules.d/10-usb-serial.rules
+
+# Rule to use:
+SUBSYSTEM=="XXX", ATTRS{idProduct}=="XXXX", ATTRS{idVendor}=="XXXX", SYMLINK+="FILE NAME"
+
+# Restart UDEVADM Service
+sudo udevadm trigger
