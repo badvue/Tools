@@ -12,3 +12,10 @@ SUBSYSTEM=="XXX", ATTRS{idProduct}=="XXXX", ATTRS{idVendor}=="XXXX", SYMLINK+="F
 
 # Restart UDEVADM Service
 sudo udevadm trigger
+
+# Pi4 Configuration for "/etc/udev/rules.d/10-usb-serial.rules"
+SUBSYSTEM=="usb", ATTRS{idProduct}=="0601", ATTRS{idVendor}=="0764", SYMLINK+="CyberPowerUPS"
+
+# Dev Configuration for "/etc/udev/rules.d/10-usb-serial.rules"
+SUBSYSTEM=="usb", ATTRS{idProduct}=="2832", ATTRS{idVendor}=="0bda", SYMLINK+="PiAware"
+SUBSYSTEM=="usb", ATTRS{idProduct}=="0601", ATTRS{idVendor}=="0764", SYMLINK+="CyberPowerUPS"
