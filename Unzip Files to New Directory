@@ -1,1 +1,4 @@
 sudo unzip filename.zip -d /path/to/directory
+
+* Restore *
+sudo tar -xzvf XXXXXX.tar.gz -C /
